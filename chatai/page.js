@@ -36,13 +36,6 @@ export default function Home() {
         setMessages((messages)=>{
           let lastMessage = messages[messages.length-1]
           let otherMessages= message.slice(0,messages.length-1)
-          return([
-            ...otherMessages,
-            {
-              ...lastMessage,
-              content: lastMessage.content + text,
-            },
-          ])
         })
         return reader.read().then(proccessText)
       })
