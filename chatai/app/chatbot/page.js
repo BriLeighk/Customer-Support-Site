@@ -1,9 +1,10 @@
 'use client'
 import { Stack, TextField, Box, Button } from "@mui/material";
-import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
+import Link from 'next/link'; // Import Link for navigation
+import { FaHome } from 'react-icons/fa'; // Import home icon
 
-export default function Home() {
+export default function Chatbot() {
   const [messages, setMessages] = useState([
     {
       role: 'assistant',
@@ -99,6 +100,9 @@ export default function Home() {
             flexDirection="column" 
             justifyContent="center" 
             alignItems="center">
+    <Link href="/home"> {/* Link to home page */}
+      <FaHome size={30} /> {/* Home icon */}
+    </Link>
     <Stack
       direction="column"
       width="600px"

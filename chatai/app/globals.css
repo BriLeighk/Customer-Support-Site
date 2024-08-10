@@ -3,3 +3,55 @@
   padding: 0;
   margin: 0;
 }
+
+html {
+  background-color: #e9e3d5;
+}
+
+.home-div {
+  box-shadow: 2px 2px 2px 4px rgba(0, 0, 0, 0.441);
+  padding: 10px;
+  margin: 10px;
+  height: 95%;
+}
+
+body {
+  
+  font-family: 'Playfair Display', serif; /* Set the font family */
+  height: 100vh; /* Ensure it covers the full height */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  color: #0b1623;
+  text-align: center;
+  width: 100%;
+  
+}
+
+header {
+  display: flex;
+  justify-content: left;
+  padding: 10px;
+}
+
+h1 {
+  font-size: 80px;
+  align-items: center;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 1); /* Add shadow behind h1 text */
+  padding: 30px;
+}
+
+svg {
+  color: #0b1623;
+  transition: color 0.3s ease-in-out;
+}
+
+svg:hover {
+  color: #0b1623a6;
+  transition: color 0.3s ease-in-out;
+}
+p {
+
+  padding: 15px;
+}
+
