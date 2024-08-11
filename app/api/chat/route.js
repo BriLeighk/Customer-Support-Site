@@ -1,40 +1,39 @@
 import { NextResponse } from 'next/server';
+import { GoogleGenerativeAI } from "@google/generative-ai";
+import { marked } from 'marked';
+import sanitizeHtml from 'sanitize-html';
 
-const systemPrompt = "An AI-powered customer support tool for HeadStartAI, a platform that provides AI-driven interviews for software engineers.";
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+const model = genAI.getGenerativeModel({
+  model: "gemini-1.5-flash",
+  generationConfig: {
+    candidateCount: 1,
+    temperature: 1.0,
+  },
+});
 
-export async function POST(req) {
+export async function POST(request) {
   try {
-    const data = await req.json();
-    console.log('Request data:', data);
+    const { messages } = await request.json();
+    const userMessage = messages[messages.length - 1].content;
 
-    const apiKey = process.env.HUGGINGFACE_API_KEY;
+    const systemPrompt = `
+      You are a customer support agent to help the user with anything they need.
+      User: ${userMessage}
+    `;
+    const result = await model.generateContent(systemPrompt);
+    const response = await result.response;
+    const content = await response.text();
 
-    const response = await fetch('https://api-inference.huggingface.co/models/facebook/blenderbot-400M-distill', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${apiKey}`,
-      },
-      body: JSON.stringify({
-        inputs: data.messages.map(msg => msg.content).join('\n'),
-      })
-    });
+    // Convert the content to HTML using marked
+    const rawHtml = marked(content);
 
-    if (!response.ok) {
-      const errorText = await response.text();
-      console.error('Error response from Hugging Face API:', errorText);
-      throw new Error('Network response was not ok');
-    }
+    // Sanitize the HTML to ensure it's safe to render
+    const sanitizedHtml = sanitizeHtml(rawHtml);
 
-    const result = await response.json();
-    console.log('Response from Hugging Face API:', result);
-
-    // Check the structure of the response and extract the appropriate content
-    const content = result.generated_text || result[0]?.generated_text || "No response generated";
-
-    return NextResponse.json({ content });
-  } catch (err) {
-    console.error('Error in POST request:', err);
-    return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
+    return NextResponse.json({ content: sanitizedHtml });
+  } catch (error) {
+    console.error('Error generating content:', error);
+    return NextResponse.json({ content: "Error: Please try again." }, { status: 500 });
   }
 }

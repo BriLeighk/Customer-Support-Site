@@ -6,7 +6,7 @@ import './chatbot.css';
 
 export default function Home() {
   const [messages, setMessages] = useState([
-    { role: 'assistant', content: 'Hi! I\'m the Headstarter support agent, how can I assist you today?' }
+    { role: 'assistant', content: 'Hi! I\'m a customer support agent, how can I assist you today?' }
   ])
   const [message, setMessage] = useState('')
   const messagesEndRef = useRef(null)
@@ -23,7 +23,7 @@ export default function Home() {
     ])
 
     try {
-      const response = await fetch('../api/chat', { 
+      const response = await fetch('/api/chat', { 
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -102,13 +102,13 @@ export default function Home() {
               justifyContent={msg.role === 'assistant' ? 'flex-start' : 'flex-end'}
             >
               <Box 
+                className="message-box"
                 bgcolor={msg.role === 'assistant' ? 'primary.main' : 'secondary.main'}
                 color="white"
                 borderRadius={16}
                 p={3}
-              >
-                {msg.content}
-              </Box>
+                dangerouslySetInnerHTML={{ __html: msg.content }} // Render HTML content
+              />
             </Box>
           ))}
           <div ref={messagesEndRef} />
