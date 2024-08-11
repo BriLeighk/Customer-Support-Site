@@ -1,3 +1,5 @@
+// NOT IN USE --- 
+// Cool concept, can add import and fragment to layout.js for active gradient background
 'use client';
 import React from 'react';
 import { ShaderGradientCanvas, ShaderGradient } from 'shadergradient';

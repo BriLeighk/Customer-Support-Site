@@ -3,8 +3,8 @@ header {
     display: flex; /* Flexbox for layout */
     justify-content: space-between; /* Space between items */
     align-items: center; /* Center items vertically */
-    
 }
+
 
 header div {
     display: flex; /* Flexbox for icons */
@@ -19,4 +19,13 @@ svg {
   svg:hover {
     color: #0b1623a6;
     transition: color 0.3s ease-in-out;
+  }
+
+  .icons {
+    display: flex;
+    align-items: center;
+  }
+
+  .icons.right {
+    justify-content: flex-end;
   }
