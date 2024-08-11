@@ -60,3 +60,49 @@ svg {
     background-color: #0b162332;
     transition: background-color 0.3s ease-in-out;
   }
+
+  .popup {
+    position: fixed; /* Fixed position to overlay on the screen */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for centering */
+    background-color: #0b1623; /* White background */
+    border: 1px solid #0b1623; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    padding: 20px; /* Padding inside the popup */
+    z-index: 2000; /* Ensure it appears above other elements */
+    width: 400px; /* Fixed width */
+    text-align: center; /* Center text */
+  }
+
+  .popup p {
+    margin: 0 0 10px; /* Margin for paragraph */
+    color: #eaf0fb; /* Dark text color */
+  }
+
+  .popup p a {
+    color: #3984fc; /* Updated link color in popup */
+    transition: color 0.3s ease-in-out;
+  }
+
+  .popup p a:hover {
+    color: rgb(57, 73, 252);
+    transition: color 0.3s ease-in-out;
+  }
+
+  .popup button {
+    background-color: #eaf0fb; /* Make button background transparent */
+    color: #0b1623; /* Button text color */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    width: 35px;
+    height: 25px;
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease-in-out; /* Transition for hover effect */
+  }
+
+  .popup button:hover {
+    background-color: #eaf0fba3; /* Keep background transparent on hover */
+    color: #0b1623; /* Change x icon color to white on hover */
+  }
