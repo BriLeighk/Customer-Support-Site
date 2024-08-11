@@ -66,7 +66,7 @@ input {
 button {
     margin-top: 35px;
     width: 100%;
-    background-color: #0b1623b8;
+    background-color: #0b1623;
     color: #e9e3d5;
     padding: 15px 0;
     font-size: 18px;
@@ -77,7 +77,7 @@ button {
 }
 
 button:hover {
-    background-color: #0b1623;
+    background-color: #0b1623b8;
     transition: background-color 0.3s ease-in-out;
 }
 .social {
@@ -86,7 +86,7 @@ button:hover {
     justify-content: flex-end;
 }
 .social div {
-    background-color: #0b162332;
+    background-color: #0b1623b8;
     color: #eaf0fb;
     text-align: center;
     border-radius: 3px;
@@ -95,7 +95,7 @@ button:hover {
     
 }
 .social div:hover {
-    background-color: #0b1623b8;
+    background-color: #0b162332;
     transition: background-color 0.3s ease-in-out;
 }
 .social .register-btn, .login-btn {

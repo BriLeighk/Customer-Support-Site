@@ -63,13 +63,15 @@ svg {
 
   .popup {
     position: fixed; /* Fixed position to overlay on the screen */
-    top: 50%; /* Center vertically */
+    top: 40%; /* Center vertically */
     left: 50%; /* Center horizontally */
     transform: translate(-50%, -50%); /* Adjust for centering */
     background-color: #0b1623; /* White background */
     border: 1px solid #0b1623; /* Light border */
     border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    -webkit-box-shadow: 0px 1px 9px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 1px 9px 2px rgba(0,0,0,0.75);
+    box-shadow: 0px 1px 9px 2px rgba(0,0,0,0.75);
     padding: 20px; /* Padding inside the popup */
     z-index: 2000; /* Ensure it appears above other elements */
     width: 400px; /* Fixed width */
@@ -92,12 +94,16 @@ svg {
   }
 
   .popup button {
+    margin-top: 0;
     background-color: #eaf0fb; /* Make button background transparent */
     color: #0b1623; /* Button text color */
     border: none; /* No border */
     border-radius: 4px; /* Rounded corners */
-    width: 35px;
-    height: 25px;
+    width: 40px;
+    height: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer; /* Pointer cursor on hover */
     transition: background-color 0.3s ease-in-out; /* Transition for hover effect */
   }
