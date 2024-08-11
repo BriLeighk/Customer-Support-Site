@@ -1,30 +1,29 @@
 import Header from '../components/Header';
-import "./login.css";
+import "../login/login.css";
 import Link from 'next/link'; // Import Link for navigation
+import "./register.css";
 
-export default function Login() {
+export default function Register() {
     return (
         
-        <div className='login'>
+        <div className='register'>
             <Header />
             <div class="background">
                 <div class="shape"></div>
                 <div class="shape"></div>
             </div>
             <form>
-                <h1>Login Form</h1>
+                <h1>Register Form</h1>
                 <label for="username">Email</label>
                 <input type="text" placeholder="Email" id="username"></input>
 
                 <label for="password">Password</label>
                 <input type="password" placeholder="Password" id="password"></input>
 
-                <button>Log In</button>
+                <button>Create Account</button>
                 <div class="social">
-                    <div class="go"><i class="fab fa-google"></i>  Google</div>
-                    
-                    <Link href="/register" style={{ textDecoration: 'none' }}>
-                    <div class="register-btn"> Create an Account</div>
+                    <Link href="/login" style={{ textDecoration: 'none' }}>
+                    <div class="login-btn"> Already have an account? Log In</div>
                     </Link>
                     
                 </div>

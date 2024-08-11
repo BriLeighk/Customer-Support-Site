@@ -7,7 +7,7 @@ html {
   background-color: #e9e3d5;
 }
 
-.home-div, .login, .MuiBox-root.css-1ks02b1 {
+.home-div, .login, .MuiBox-root.css-1ks02b1, .register {
   -webkit-box-shadow: 0px 1px 9px 2px rgba(0,0,0,0.75);
 -moz-box-shadow: 0px 1px 9px 2px rgba(0,0,0,0.75);
 box-shadow: 0px 1px 9px 2px rgba(0,0,0,0.75);
@@ -25,9 +25,7 @@ body {
   justify-content: center;
   align-items: flex-start;
   color: #0b1623;
-  text-align: center;
-
-  
+  text-align: center; 
 }
 
 h1 {

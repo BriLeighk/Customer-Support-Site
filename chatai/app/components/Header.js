@@ -10,7 +10,7 @@ const Header = () => {
     return (
         <header>
             <div className='icons left'>
-                <Link href="/home"> {/* Link to home page */}
+                <Link href="/"> {/* Link to home page */}
                     <FaHome size={30} /> {/* Home icon */}
                 </Link>
 
