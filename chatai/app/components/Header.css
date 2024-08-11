@@ -1,0 +1,22 @@
+header {
+    padding: 10px; /* Padding around the header */
+    display: flex; /* Flexbox for layout */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Center items vertically */
+    
+}
+
+header div {
+    display: flex; /* Flexbox for icons */
+    gap: 15px; /* Space between icons */
+}
+
+svg {
+    color: #0b1623;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  svg:hover {
+    color: #0b1623a6;
+    transition: color 0.3s ease-in-out;
+  }

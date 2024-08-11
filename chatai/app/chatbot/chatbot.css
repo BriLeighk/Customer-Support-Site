@@ -1,0 +1,20 @@
+header {
+    margin-top: 10px;
+    display: flex;
+    width: 100%;
+    justify-content: left;
+}
+
+.container {
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
+}
+
+.MuiBox-root.css-1ks02b1 {
+    box-shadow: 2px 2px 2px 4px rgba(0, 0, 0, 0.441);
+    padding: 20px;
+    margin: 10px;
+    height: 100%;
+}
+
+
+

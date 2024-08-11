@@ -1,8 +1,8 @@
 'use client'
 import { Stack, TextField, Box, Button } from "@mui/material";
 import { useState, useEffect, useRef } from "react";
-import Link from 'next/link'; // Import Link for navigation
-import { FaHome } from 'react-icons/fa'; // Import home icon
+import Header from '../components/Header';
+import './chatbot.css';
 
 export default function Chatbot() {
   const [messages, setMessages] = useState([
@@ -93,16 +93,18 @@ export default function Chatbot() {
     scrollToBottom()
   }, [messages]);
 
-  return(<Box 
+  return(
+  
+    <Box
             width="100vw" 
             height="100vh" 
             display="flex" 
             flexDirection="column" 
             justifyContent="center" 
             alignItems="center">
-    <Link href="/home"> {/* Link to home page */}
-      <FaHome size={30} /> {/* Home icon */}
-    </Link>
+    
+  
+    <Header/>
     <Stack
       direction="column"
       width="600px"
