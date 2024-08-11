@@ -7,7 +7,10 @@ export default function Home() {
             <Header />
             <h1>AI Customer Support</h1>
             <main>
-                <p>This is the home page. Navigate to the chatbot for assistance.</p>
+                <p>Welcome to our Customer Support website! <br/>
+                Create an account and log in to start using our AI Chatbot.
+                </p>
+
             </main>
         </div>
     );
