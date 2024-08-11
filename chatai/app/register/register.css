@@ -1,2 +1,6 @@
 /* For additional styling on the register page if needed */
 
+.error {
+    color: red;
+    margin-top: 10px;
+}
