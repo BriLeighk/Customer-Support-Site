@@ -4,18 +4,15 @@ header {
     width: 100%;
 }
 
-.css-usrzw8-MuiStack-root {
-    width: 95%;
-}
 
 .chat-container {
     flex-grow: 1;
     overflow-y: auto;
-    max-height: 80%;
 }
 
 .css-usrzw8-MuiStack-root {
-    height: 600px;
+    width: 97%;
+    height: 80%;
 }
 
 .message-box {
