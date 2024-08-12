@@ -84,7 +84,6 @@ export default function Home() {
       <Header/>
       <Stack
         direction="column"
-        width="600px"
         height="700px"
         border="1px solid black"
         p={2}
@@ -102,7 +101,7 @@ export default function Home() {
               justifyContent={msg.role === 'assistant' ? 'flex-start' : 'flex-end'}
             >
               <Box 
-                className="message-box"
+                className={`message-box ${msg.role === 'assistant' ? 'assistant-message' : 'user-message'}`}
                 bgcolor={msg.role === 'assistant' ? 'primary.main' : 'secondary.main'}
                 color="white"
                 borderRadius={16}
