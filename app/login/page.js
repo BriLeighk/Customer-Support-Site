@@ -40,16 +40,16 @@ export default function Login() {
         <div className='login'>
             <Header />
             <form onSubmit={handleLogin}>
+                
                 <h1>Login Form</h1>
                 <label htmlFor="username">Email</label>
                 <input type="text" placeholder="Email" id="username" value={email} onChange={(e) => setEmail(e.target.value)} />
 
                 <label htmlFor="password">Password</label>
                 <input type="password" placeholder="Password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-
                 {error && <p className="error">{error}</p>}
-
                 <button type="submit">Log In</button>
+                
                 <div className="social">
                     <Link href="/register" style={{ textDecoration: 'none' }}>
                         <div className="register-btn"> Create an Account</div>

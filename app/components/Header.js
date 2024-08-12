@@ -5,8 +5,7 @@ import { FaRobot } from 'react-icons/fa';
 import { FaHome } from 'react-icons/fa'; 
 import { IoPersonCircle } from "react-icons/io5";
 import Link from 'next/link'; 
-import { auth } from '../firebase'; // Import auth from your firebase setup
-import { signOut } from 'firebase/auth'; // Import signOut
+import { auth, signOut } from '../firebase'; // Ensure auth is imported
 import { FaTimes } from 'react-icons/fa'; // Import FaTimes for x icon
 
 import './Header.css';
@@ -50,7 +49,10 @@ const Header = () => {
                     {dropdownOpen && (
                         <div className="dropdown-menu">
                             {user ? (
-                                <Link href="/login" onClick={handleLogout}>Sign Out</Link>
+                                <>
+                                    <Link href="/dashboard">Dashboard</Link>
+                                    <Link href="/login" onClick={handleLogout}>Sign Out</Link>
+                                </>
                             ) : (
                                 <Link href="/login">Log In</Link>
                             )}

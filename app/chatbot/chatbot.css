@@ -10,14 +10,6 @@ header {
     overflow-y: auto;
 }
 
-.css-usrzw8-MuiStack-root {
-    width: 90vw;
-    height: 80%;
-    max-width: 97%;
-    max-height: 100%;
-    overflow: hidden;
-}
-
 .message-box {
   max-width: 80%;
   word-wrap: break-word;

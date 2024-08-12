@@ -1,0 +1,41 @@
+.deleteAccount-button, .editPassword-button, .savePassword-button, .cancelEdit-button, .editPassword-button, .savePassword-button, .cancelEdit-button {
+    background-color: #0b1623;
+    color: #eaf0fb;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.deleteAccount-button {
+    margin-left: 5px;
+    position: absolute;
+    bottom: 2%;
+    right: 15%;
+}
+
+p {
+    text-align: left;
+}
+
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.input-group label {
+    display: flex;
+    flex: 1;
+    text-align: left;
+    align-items: flex-end;
+}
+
+.input-group input {
+    flex: 2;
+    height: 30px;
+    background-color: #0b1623;
+    border-radius: 4px;
+    color: #eaf0fb;
+}

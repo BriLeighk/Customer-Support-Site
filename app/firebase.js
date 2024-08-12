@@ -1,14 +1,11 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics, isSupported } from "firebase/analytics";
-import { getAuth } from "firebase/auth"; // Import getAuth
-import dotenv from 'dotenv'; // Add this line
-dotenv.config(); // Add this line to load .env.local
-
-// Debugging: Log environment variables
-console.log('Environment Variables:', process.env); // Check if variables are loaded
+import { getAuth, signOut, updatePassword, deleteUser, reauthenticateWithCredential, EmailAuthProvider } from "firebase/auth"; // Ensure all necessary imports
+import dotenv from 'dotenv';
+dotenv.config();
 
 const firebaseConfig = {
-    apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY, // Ensure prefix if using Next.js
+    apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
     authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
     projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
     storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
@@ -16,9 +13,6 @@ const firebaseConfig = {
     appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
     measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID
 };
-
-// Debugging: Log the firebaseConfig
-console.log('Firebase Config:', firebaseConfig); // Check if config is populated
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app); // Initialize Firebase Auth
@@ -30,4 +24,4 @@ isSupported().then((supported) => {
     }
 });
 
-export { app, analytics, auth }; // Export auth
+export { app, analytics, auth, signOut, updatePassword, deleteUser, reauthenticateWithCredential, EmailAuthProvider }; // Ensure all necessary exports

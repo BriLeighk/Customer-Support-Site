@@ -16,7 +16,6 @@
     top: 50%;
 }
 
-
 form {
     height: 520px;
     width: 400px;
@@ -64,8 +63,12 @@ input {
     color: #e5e5e5;
 }
 button {
-    margin-top: 35px;
-    width: 100%;
+    position: fixed;
+    left: 50%;
+    bottom: 12%;
+    transform: translateX(-50%);
+    margin-top: 10px;
+    width: 83%;
     background-color: #0b1623;
     color: #e9e3d5;
     padding: 15px 0;
@@ -86,14 +89,24 @@ button:hover {
     justify-content: flex-end;
 }
 .social div {
+    position: fixed;
+    right: -11%;
+    bottom: 3%;
+    transform: translateX(-50%);
     background-color: #0b1623b8;
     color: #eaf0fb;
     text-align: center;
     border-radius: 3px;
     padding: 5px 10px 10px 5px;
-    transition: background-color 0.3s ease-in-out;
-    
+    transition: background-color 0.3s ease-in-out; 
 }
+
+.login-btn { 
+    width: 70%;
+    left: 50%;
+
+}
+
 .social div:hover {
     background-color: #0b162332;
     transition: background-color 0.3s ease-in-out;
@@ -104,4 +117,12 @@ button:hover {
 }
 .social i {
     margin-right: 4px;
+}
+
+.error {
+    color: red;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+    
 }
