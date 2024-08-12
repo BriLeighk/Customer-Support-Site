@@ -11,8 +11,11 @@ header {
 }
 
 .css-usrzw8-MuiStack-root {
-    width: 60vw;
+    width: 90vw;
     height: 80%;
+    max-width: 97%;
+    max-height: 100%;
+    overflow: hidden;
 }
 
 .message-box {
@@ -20,3 +23,8 @@ header {
   word-wrap: break-word;
   text-align: left;
 }
+
+.message-box.MuiBox-root.css-hjlwmu {
+    background-color: #00c591; /* Change this to your desired color */
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  }
