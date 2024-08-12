@@ -33,13 +33,18 @@ body {
 }
 
 h1 {
-  font-size: 10vw;
+  font-size: 50px; /* Default font size for mobile */
   align-items: center;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 1); /* Add shadow behind h1 text */
   padding: 30px;
 }
 
+@media (min-width: 600px) {
+  h1 {
+    font-size: 70px; /* Font size for larger screens */
+  }
+}
+
 p {
   padding: 15px;
 }
-
